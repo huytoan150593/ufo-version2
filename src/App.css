@@ -1,38 +1,48 @@
-.App {
-  text-align: center;
+/*   
+font-family: 'Alata', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --text-color: #000000;
+  --primary-color: #F3EBE0;
+  --secondary-color: #AD9466;
+  --mid-color: #ECE1D2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  font-family: 'Alata', sans-serif;
+  font-size: 20px;
+  color: var(--text-color);
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media screen and (max-width: 1201px) {
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media screen and (max-width: 1024px) {
 }
-
-.App-link {
-  color: #61dafb;
+@media screen and (max-width: 834px) {
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 480px) {
 }
