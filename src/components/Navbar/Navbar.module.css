@@ -8,6 +8,16 @@
     justify-content: space-between;
     border-bottom: 1px solid var(--text-color);
 }
+.mobi {
+    display: none;
+}
+.overlay {
+    position: absolute;
+    top: 160px;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
 .logo {
     flex-basis: 16%;
     max-width: 250px;
@@ -27,7 +37,7 @@
     justify-content: space-between;
 }
 .menu ul li {
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
 }
 .menu ul li::before{
@@ -52,8 +62,8 @@
 }
 .icon {
     padding: 5px;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,10 +85,23 @@
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 834px) {
+    .logo {
+        margin-left: 20px;
+    }
+    .menu {
+        flex-basis: 40%;
+    }
+    .icons {
+        flex-basis: 20%;
+        margin-right: 20px;
+    }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 620px) {
     .navbar {
         height: 80px;
+    }
+    .mobi {
+        display: block;
     }
     .logo, .menu, .icons {
         display: none;
@@ -105,13 +128,22 @@
         background-color: var(--primary-color);
         text-align: center;
         position: absolute;
-        top: 80px;
+        opacity: 0;
+        top: -200%;
         width: 100%;
-        z-index: 2;
+        z-index: 1;
         line-height: 2.5rem;
+        animation: moveIn .3s forwards;
         transition: linear .3s;
     }
     .mobi ul li {
         border-bottom: 1px solid var(--text-color);
+    }
+}
+
+@keyframes moveIn {
+    to {
+        top: 80px;
+        opacity: 1;
     }
 }

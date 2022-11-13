@@ -4,6 +4,8 @@ import { useState } from "react";
 import { BsYoutube, BsFacebook, BsTwitter, BsFilm } from "react-icons/bs";
 
 const Navbar = () => {
+    console.log(window.screen.width);
+    const menuList = ["home", "projects", "gallery", "contact"];
     const [show, setShow] = useState(false);
     const handleClick = () => {
         setShow(!show);
@@ -15,18 +17,11 @@ const Navbar = () => {
             </div>
             <div className={styles.menu}>
                 <ul>
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#gallery">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+                    {menuList.map((item) => (
+                        <li key={item}>
+                            <a href={`#${item}`}>{item}</a>
+                        </li>
+                    ))}
                 </ul>
             </div>
             <div className={styles.icons}>
@@ -57,19 +52,13 @@ const Navbar = () => {
             {show && (
                 <div className={styles.mobi}>
                     <ul>
-                        <li>
-                            <a href="#home">Home</a>
-                        </li>
-                        <li>
-                            <a href="#projects">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#gallery">Gallery</a>
-                        </li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
+                        {menuList.map((item) => (
+                            <li key={item} onClick={handleClick}>
+                                <a href={`#${item}`}>{item}</a>
+                            </li>
+                        ))}
                     </ul>
+                    <div className={styles.overlay} onClick={handleClick}></div>
                 </div>
             )}
         </div>
