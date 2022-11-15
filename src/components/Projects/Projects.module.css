@@ -1,0 +1,177 @@
+.container {
+    position: relative;
+    margin-top: 50px;
+}
+.arrow {
+    position: relative;
+    width: 70%;
+    height: 2px;
+    background-color: var(--text-color);
+    margin-bottom: 50px;
+    margin-left: 25%;
+}
+.arrow::after {
+    position: absolute;
+    content: "\25C0";
+    left: -10px;
+    top: -14px;
+}
+.arrow::before {
+    position: absolute;
+    content: "our projects";
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    left: -150px;
+    top: -15px;
+}
+.wrapper {
+    padding-top: 50px;
+}
+.project {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+.project:nth-child(2) {
+    flex-direction: row-reverse;
+}
+.project:not(:nth-child(2)) {
+    text-align: right;
+}
+.project:nth-child(1)::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 120%;
+    top: -25px;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+}
+.project:nth-child(1)::before {
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    top: -200px;
+    left: -50px;
+    z-index: -1;
+}
+.project:nth-child(3)::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 120%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    right: 0;
+}
+.image {
+    position: relative;
+    flex-basis: 65%;
+}
+img:hover {
+    opacity: 0.8;
+    transform: scale(.9);
+}
+.image::after {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--background-color);
+    font-family: "Poppins" sans-serif;
+    font-weight: 600px;
+    font-size: 40px;
+    text-shadow: 2px 3px var(--primary-color);
+}
+.project:nth-child(1) .image::after {
+    content: "music video";
+}
+.project:nth-child(2) .image::after {
+    content: "television video";
+    
+}
+.project:nth-child(3) .image::after {
+    content: "viral video";
+}
+.image img {
+    width: 100%;
+    transition: linear .2s;
+}
+.content {
+    flex-basis: 30%;
+    padding: 20px;
+}
+.content p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.content button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1201px) {
+}
+@media screen and (max-width: 1024px) {
+    .content p {
+        font-size: 14px;
+    }
+    .content button {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 834px) {
+    .arrow {
+        width: 60%;
+        margin-left: 35%
+    }
+    .project {
+        justify-content: flex-end;
+    }
+    .divide {
+        display: none;
+    }
+    .content {
+        padding: auto 0;
+    }
+    .image::after {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .arrow {
+        width: 40%;
+        height: 2px;
+        margin-left: 50%;
+    }
+    .project {
+        flex-direction: column-reverse;
+    }
+    .project:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+    .image {
+        flex-basis: 100%;
+    }
+    .image::after {
+        font-size: 20px;
+    }
+    .content {
+        flex-basis: 100%;
+        text-align: left;
+        padding: 0 20px;
+    }
+    .content p {
+        margin: 10px 0;
+    }
+}

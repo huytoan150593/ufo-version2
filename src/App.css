@@ -6,9 +6,9 @@ font-family: 'Poppins', sans-serif;
 
 :root {
   --text-color: #000000;
-  --primary-color: #F3EBE0;
-  --secondary-color: #AD9466;
-  --mid-color: #ECE1D2;
+  --background-color: #F3EBE0;
+  --primary-color: #AD9466;
+  --secondary-color: #ECE1D2;
 }
 
 * {
@@ -23,7 +23,7 @@ body {
   font-size: 20px;
   color: var(--text-color);
   overflow-x: hidden;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 a,
 a:hover,
@@ -44,5 +44,5 @@ ul {
 }
 @media screen and (max-width: 834px) {
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 6200px) {
 }
