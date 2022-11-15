@@ -75,8 +75,9 @@
 .image {
     position: relative;
     flex-basis: 65%;
+    transition: linear .2s;
 }
-img:hover {
+.image:hover {
     opacity: 0.8;
     transform: scale(.9);
 }
