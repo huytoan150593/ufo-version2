@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    font-size: 20px;
+}
+.content {
+    flex-basis: 85%;
+    padding-top: 50px;
+}
+.content p {
+    text-align: right;
+}
+.arrow {
+    position: relative;
+    width: 20px;
+    height: 300px;
+    border-right: solid 2px var(--text-color);
+    margin-top: 50px;
+}
+.arrow::after {
+    position: absolute;
+    content: "\25BC";
+    width: 20px;
+    height: 20px;
+    bottom: -10px;
+    left: 9px;
+}
+.arrow::before {
+    position: absolute;
+    content: "about us";
+    width: 100px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    bottom: -90px;
+    right: -52px;
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 834px) {
+    p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 620px) {
+    .container {
+        padding-right: 20px;
+    }
+}
