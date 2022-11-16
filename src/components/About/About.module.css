@@ -13,16 +13,17 @@
 }
 .arrow {
     position: relative;
-    width: 2px;
+    width: 1px;
     height: 300px;
     background-color: var(--text-color);
     margin-top: 50px;
+    margin-bottom: 200px;
 }
 .arrow::after {
     position: absolute;
-    content: "\25BC";
-    bottom: -20px;
-    right: -8px;
+    content: "\23F7";
+    bottom: -15px;
+    left: -5px;
 }
 .arrow::before {
     position: absolute;

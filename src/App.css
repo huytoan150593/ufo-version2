@@ -37,6 +37,10 @@ ul {
   margin: 0;
   padding: 0;
 }
+img {
+  width: 100%;
+  transition: linear .2s;
+}
 
 @media screen and (max-width: 1201px) {
 }
