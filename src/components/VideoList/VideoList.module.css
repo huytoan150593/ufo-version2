@@ -1,0 +1,20 @@
+.container {
+    font-size: 16px;
+    border: 2px solid var(--primary-color);
+    margin: 100px 50px;
+    border-radius: 20px;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-left: 10px;
+}
+.thumb {
+    width: 50px;
+}
+.name {
+    flex-basis: 60%;
+    text-align: right;
+}

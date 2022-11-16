@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     padding: 50px;
-    font-size: 20px;
+    font-size: 18px;
 }
 .content {
     flex-basis: 85%;
@@ -23,7 +23,7 @@
     position: absolute;
     content: "\23F7";
     bottom: -15px;
-    left: -5px;
+    left: -4px;
 }
 .arrow::before {
     position: absolute;
