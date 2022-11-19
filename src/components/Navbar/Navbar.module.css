@@ -1,7 +1,7 @@
 .navbar {
     position: relative;
     color: var(--text-color);
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     height: 100px;
     display: flex;
     align-items: center;
@@ -30,6 +30,7 @@
 }
 .menu {
     flex-basis: 50%;
+    max-width: 900px;
 }
 .menu ul {
     width: 100%;
@@ -75,7 +76,7 @@
 .icon:hover {
     transform: translateY(-30%) scale(1.2);
     background-color: var(--text-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .hamburger, .mobilogo, .brand {
     display: none;
@@ -138,6 +139,7 @@
     }
     .mobi ul li {
         border-bottom: 1px solid var(--text-color);
+        background-color: var(--secondary-color);
     }
 }
 

@@ -17,6 +17,7 @@
 .wrapper {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding-top: 40px;
 }
 .image {
@@ -78,5 +79,17 @@
 }
 @media screen and (max-width: 834px) {
 }
-@media screen and (max-width: 6200px) {
+@media screen and (max-width: 620px) {
+    .image {
+        flex-basis: 90%;
+        margin: auto;
+    }
+    .image::before {
+        width: 150px;
+        height: 150px;
+    }
+    .content {
+        flex-basis: 90%;
+        padding-top: 50px;
+    }
 }

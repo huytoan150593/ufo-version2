@@ -1,4 +1,5 @@
 .container {
+    position: relative;
     display: flex;
     justify-content: space-around;
     padding: 50px;
@@ -14,16 +15,19 @@
 .arrow {
     position: relative;
     width: 1px;
-    height: 300px;
+    max-height: 300px;
     background-color: var(--text-color);
     margin-top: 50px;
     margin-bottom: 200px;
+    opacity: 0;
+    transform: translateY(-120%);
+    animation: runArrow 1s 1s forwards;
 }
 .arrow::after {
     position: absolute;
     content: "\23F7";
-    bottom: -15px;
-    left: -4px;
+    bottom: -10px;
+    left: -8px;
 }
 .arrow::before {
     position: absolute;
@@ -34,7 +38,9 @@
     font-weight: 800;
     bottom: -90px;
     right: -50px;
-    transform: rotate(90deg);
+    opacity: 0;
+    transform: rotate(90deg) translateX(-200%);
+    animation: showTitle 1s 2s forwards;
 }
 @media screen and (max-width: 1024px) {
     .arrow {
@@ -52,5 +58,21 @@
 @media screen and (max-width: 620px) {
     .container {
         padding-right: 20px;
+    }
+    .content p{
+        text-align: justify;
+    }
+}
+
+@keyframes runArrow {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes showTitle {
+    to {
+        opacity: 1;
+        transform: translateX(0) rotate(90deg);
     }
 }

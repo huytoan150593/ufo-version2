@@ -1,9 +1,18 @@
 import React from "react";
 import styles from "./Director.module.css";
+import { useInView } from "react-intersection-observer";
 
 const Director = () => {
+    const { ref: myRef, inView: isVisibleElement } = useInView({
+        threshold: 0.5,
+    });
     return (
-        <div className={styles.container}>
+        <div
+            ref={myRef}
+            className={`${styles.container} ${
+                isVisibleElement ? styles.show : ""
+            }`}>
+            <p>{isVisibleElement.toString}</p>
             <div className={styles.arrow}></div>
             <div className={styles.wrapper}>
                 <div className={styles.image}>
