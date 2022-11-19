@@ -1,5 +1,7 @@
 .navbar {
     position: relative;
+    font-family: var(--title-font), sans-serif;
+    font-weight: 600;
     color: var(--text-color);
     background-color: var(--secondary-color);
     height: 100px;
@@ -7,6 +9,7 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--text-color);
+    text-transform: capitalize;
 }
 .mobi {
     display: none;

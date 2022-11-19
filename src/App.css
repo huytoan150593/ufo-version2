@@ -3,12 +3,17 @@ font-family: 'Alata', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
 
 :root {
   --text-color: #000000;
   --background-color: #F3EBE0;
   --primary-color: #AD9466;
   --secondary-color: #ECE1D2;
+  --title-font: 'Josefin Sans', sans-serif;
+  --content-font: 'Alata', sans-serif;
+  --title-font-size: 25px;
+  --content-font-size: 20px;
 }
 
 * {
@@ -19,8 +24,8 @@ font-family: 'Poppins', sans-serif;
 }
 body {
   position: relative;
-  font-family: 'Alata', sans-serif;
-  font-size: 20px;
+  font-family: var(--content-font), sans-serif;
+  font-size: var(--content-font-size);
   color: var(--text-color);
   overflow-x: hidden;
   background-color: var(--background-color);

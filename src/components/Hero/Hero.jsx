@@ -15,7 +15,7 @@ const Hero = () => {
                 <p className={styles.btn}>watch video</p>
             </div>
             <div className={styles.image}>
-                <img src="./assets/main-img.png" alt="main" />
+                <img src="./assets/main-img.png" alt="main" loading="lazy" />
             </div>
         </div>
     );

@@ -31,7 +31,7 @@ function Projects() {
                             <button>show more</button>
                         </div>
                         <div className={styles.image}>
-                            <img src={item.img} alt="" />
+                            <img src={item.img} alt="" loading="lazy" />
                         </div>
                     </div>
                 ))}

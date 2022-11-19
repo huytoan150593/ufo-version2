@@ -36,7 +36,11 @@ const Director = () => {
                         make great products.
                     </div>
                     <div className={styles.sign}>
-                        <img src="./assets/sign.png" alt="signature" />
+                        <img
+                            loading="lazy"
+                            src="./assets/sign.png"
+                            alt="signature"
+                        />
                     </div>
                 </div>
             </div>

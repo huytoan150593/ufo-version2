@@ -55,7 +55,7 @@
     align-items: flex-end;
 }
 .content .title {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--title-font), sans-serif;
     width: 100%;
     font-weight: 800;
     font-size: 20px;

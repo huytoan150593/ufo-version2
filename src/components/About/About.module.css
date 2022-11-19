@@ -33,7 +33,7 @@
     position: absolute;
     content: "about us";
     width: 100px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--title-font), sans-serif;
     font-size: 20px;
     font-weight: 800;
     bottom: -90px;
