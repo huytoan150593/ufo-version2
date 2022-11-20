@@ -60,7 +60,7 @@
     animation: moveInHorizontal .3s forwards;
 }
 .btn:hover {
-    transform: scale(1.1);
+    font-size: 23px;
 }
 .image{
     position: relative;

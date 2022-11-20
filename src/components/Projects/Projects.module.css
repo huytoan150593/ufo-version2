@@ -10,6 +10,8 @@
     background-color: var(--text-color);
     margin-bottom: 50px;
     margin-left: 25%;
+    transform: translateX(200%);
+    animation: moveInHorizon 1s forwards;
 }
 .arrow::after {
     position: absolute;
@@ -24,7 +26,10 @@
     font-family: var(--title-font), sans-serif;
     font-weight: 800;
     left: -150px;
-    top: -15px;
+    top: -11px;
+    transform: translateX(120%);
+    opacity: 0;
+    animation: fog .5s 1s forwards, moveInHorizon .5s 1s forwards;
 }
 .wrapper {
     padding-top: 50px;
@@ -52,6 +57,8 @@
     left: 0;
     background-color: var(--primary-color);
     z-index: -1;
+    opacity: 0;
+    animation: fog .5s .5s forwards;
 }
 .project:nth-child(1)::before {
     position: absolute;
@@ -63,6 +70,8 @@
     top: -200px;
     left: -50px;
     z-index: -1;
+    opacity: 0;
+    animation: fog .5s .5s forwards;
 }
 .project:nth-child(3)::before {
     position: absolute;
@@ -72,11 +81,18 @@
     background-color: var(--primary-color);
     z-index: -1;
     right: 0;
+    opacity: 0;
+    animation: fog .5s .5s forwards;
 }
 .image {
     position: relative;
     flex-basis: 65%;
     transition: linear .2s;
+    transform: translateX(120%);
+    animation: moveInHorizon .5s forwards;
+}
+.project:nth-child(2) .image{
+    transform: translateX(-120%);
 }
 .image:hover {
     opacity: 0.8;
@@ -92,6 +108,8 @@
     font-weight: 600px;
     font-size: 40px;
     text-shadow: 2px 3px var(--primary-color);
+    opacity: 0;
+    animation: fog .5s .5s forwards;
 }
 .project:nth-child(1) .image::after {
     content: "music video";
@@ -106,6 +124,11 @@
 .content {
     flex-basis: 30%;
     padding: 20px;
+    transform: translateX(-120%);
+    animation: moveInHorizon .5s forwards
+}
+.project:nth-child(2) .content {
+    transform: translateX(120%);
 }
 .content p {
     font-size: 18px;
@@ -151,7 +174,6 @@
 @media screen and (max-width: 620px) {
     .arrow {
         width: 40%;
-        height: 2px;
         margin-left: 50%;
     }
     .project {
@@ -173,5 +195,16 @@
     }
     .content p {
         margin: 10px 0;
+    }
+}
+
+@keyframes moveInHorizon {
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes fog {
+    to {
+        opacity: 1;
     }
 }

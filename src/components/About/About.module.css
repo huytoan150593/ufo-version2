@@ -15,13 +15,13 @@
 .arrow {
     position: relative;
     width: 1px;
-    max-height: 300px;
+    max-height: 500px;
     background-color: var(--text-color);
     margin-top: 50px;
     margin-bottom: 200px;
     opacity: 0;
     transform: translateY(-120%);
-    animation: runArrow 1s 1s forwards;
+    animation: runArrow 1s forwards;
 }
 .arrow::after {
     position: absolute;
@@ -40,12 +40,10 @@
     right: -50px;
     opacity: 0;
     transform: rotate(90deg) translateX(-200%);
-    animation: showTitle 1s 2s forwards;
+    animation: showTitle .5s 1s forwards;
 }
 @media screen and (max-width: 1024px) {
-    .arrow {
-        height: 150px;
-    }
+    
     p {
         font-size: 14px;
     }

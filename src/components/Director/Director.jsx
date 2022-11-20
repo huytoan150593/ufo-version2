@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Director.module.css";
-import { useInView } from "react-intersection-observer";
 
 const Director = () => {
-    const { ref: myRef, inView: isVisibleElement } = useInView({
-        threshold: 0.5,
-    });
+    const myRef = useRef();
+    const [visible, setVisible] = useState();
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            setVisible(entries[0].isIntersecting);
+        });
+        if (myRef.current) {
+            observer.observe(myRef.current);
+        }
+    }, [visible]);
     return (
-        <div
-            ref={myRef}
-            className={`${styles.container} ${
-                isVisibleElement ? styles.show : ""
-            }`}>
-            <p>{isVisibleElement.toString}</p>
+        <div className={styles.container} ref={myRef}>
             <div className={styles.arrow}></div>
             <div className={styles.wrapper}>
                 <div className={styles.image}>
