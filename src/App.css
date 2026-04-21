@@ -6,10 +6,34 @@ font-family: 'Poppins', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --text-color: #000000;
-  --background-color: #F3EBE0;
-  --primary-color: #AD9466;
-  --secondary-color: #ECE1D2;
+  /* Foundation tokens */
+  --color-ink: #000000;
+  --color-paper: #F3EBE0;
+  --color-brand: #AD9466;
+  --color-surface: #ECE1D2;
+  --color-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Semantic tokens */
+  --page-bg: var(--color-paper);
+  --surface-bg: var(--color-surface);
+  --accent-bg: var(--color-brand);
+  --accent-decor: var(--color-brand);
+  --text-primary: var(--color-ink);
+  --text-muted: rgba(0, 0, 0, 0.72);
+  --text-on-accent: var(--color-paper);
+  --border-subtle: rgba(0, 0, 0, 0.18);
+  --border-strong: var(--color-ink);
+  --overlay-bg: var(--color-overlay);
+  --interactive-bg: transparent;
+  --interactive-text: var(--color-ink);
+  --interactive-hover-bg: var(--color-ink);
+  --interactive-hover-text: var(--color-paper);
+
+  /* Transition aliases for existing modules */
+  --text-color: var(--text-primary);
+  --background-color: var(--page-bg);
+  --primary-color: var(--accent-bg);
+  --secondary-color: var(--surface-bg);
   --title-font: 'Josefin Sans', sans-serif;
   --content-font: 'Alata', sans-serif;
   --title-font-size: 25px;
@@ -26,9 +50,9 @@ body {
   position: relative;
   font-family: var(--content-font), sans-serif;
   font-size: var(--content-font-size);
-  color: var(--text-color);
+  color: var(--text-primary);
   overflow-x: hidden;
-  background-color: var(--background-color);
+  background-color: var(--page-bg);
 }
 a,
 a:hover,
@@ -55,5 +79,4 @@ img {
 }
 @media screen and (max-width: 6200px) {
 }
-
 

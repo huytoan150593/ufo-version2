@@ -20,7 +20,7 @@ function Projects() {
         },
     ];
     return (
-        <div className={styles.container}>
+        <section className={styles.container} id="projects">
             <div className={styles.arrow}></div>
             <div className={styles.wrapper}>
                 {proType.map((item, idx) => (
@@ -36,7 +36,7 @@ function Projects() {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

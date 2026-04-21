@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 
 const Hero = () => {
     return (
-        <div className={styles.hero}>
+        <section className={styles.hero} id="home">
             <div className={styles.content}>
                 <p className={styles.title}>UFO-Entertainment</p>
                 <p className={styles.des}>
@@ -17,7 +17,7 @@ const Hero = () => {
             <div className={styles.image}>
                 <img src="./assets/main-img.png" alt="main" loading="lazy" />
             </div>
-        </div>
+        </section>
     );
 };
 

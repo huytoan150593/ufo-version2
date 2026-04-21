@@ -48,7 +48,7 @@
     background-size: contain;
     width: 287px;
     height: 58px;
-    color: var(--background-color);
+    color: var(--text-on-accent);
     font-family: var(--title-font), sans-serif;
     font-size: 25px;
     font-weight: 800;
@@ -80,7 +80,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--accent-decor);
     animation: shadowEffect .2s .3s forwards;
  }
 @media screen and (max-width: 1201px) {

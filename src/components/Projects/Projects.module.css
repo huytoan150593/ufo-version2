@@ -7,7 +7,7 @@
     position: relative;
     width: 70%;
     height: 1px;
-    background-color: var(--text-color);
+    background-color: var(--border-strong);
     margin-bottom: 50px;
     margin-left: 25%;
     transform: translateX(200%);
@@ -55,7 +55,7 @@
     height: 120%;
     top: -25px;
     left: 0;
-    background-color: var(--primary-color);
+    background-color: var(--accent-decor);
     z-index: -1;
     opacity: 0;
     animation: fog .5s .5s forwards;
@@ -66,7 +66,7 @@
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--accent-decor);
     top: -200px;
     left: -50px;
     z-index: -1;
@@ -78,7 +78,7 @@
     content: "";
     width: 60%;
     height: 120%;
-    background-color: var(--primary-color);
+    background-color: var(--accent-decor);
     z-index: -1;
     right: 0;
     opacity: 0;
@@ -103,11 +103,11 @@
     bottom: 50%;
     left: 50%;
     transform: translate(-50%);
-    color: var(--background-color);
+    color: var(--text-on-accent);
     font-family: var(--title-font), sans-serif;
     font-weight: 600px;
     font-size: 40px;
-    text-shadow: 2px 3px var(--primary-color);
+    text-shadow: 2px 3px var(--accent-decor);
     opacity: 0;
     animation: fog .5s .5s forwards;
 }
@@ -133,10 +133,12 @@
 .content p {
     font-size: 18px;
     margin: 20px 0;
+    color: var(--text-primary);
 }
 .content button {
     border: none;
-    background-color: transparent;
+    background-color: var(--interactive-bg);
+    color: var(--interactive-text);
     font-size: 20px;
     text-decoration: underline;
     cursor: pointer;

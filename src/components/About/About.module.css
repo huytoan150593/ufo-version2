@@ -11,12 +11,13 @@
 }
 .content p {
     text-align: right;
+    color: var(--text-primary);
 }
 .arrow {
     position: relative;
     width: 1px;
     max-height: 500px;
-    background-color: var(--text-color);
+    background-color: var(--border-strong);
     margin-top: 50px;
     margin-bottom: 200px;
     opacity: 0;

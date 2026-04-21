@@ -2,13 +2,13 @@
     position: relative;
     font-family: var(--title-font), sans-serif;
     font-weight: 600;
-    color: var(--text-color);
-    background-color: var(--secondary-color);
+    color: var(--text-primary);
+    background-color: var(--surface-bg);
     height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--text-color);
+    border-bottom: 1px solid var(--border-strong);
     text-transform: capitalize;
 }
 .mobi {
@@ -19,7 +19,7 @@
     top: 160px;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, .7);
+    background-color: var(--overlay-bg);
 }
 .logo {
     flex-basis: 16%;
@@ -51,7 +51,7 @@
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: var(--text-color);
+    background-color: var(--border-strong);
     transition: linear .2s;
 }
 .menu ul li:hover::before {
@@ -72,14 +72,16 @@
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--border-strong);
+    background-color: var(--interactive-bg);
+    color: var(--interactive-text);
     transition: linear .2s;
     cursor: pointer;
 }
 .icon:hover {
     transform: translateY(-30%) scale(1.2);
-    background-color: var(--text-color);
-    color: var(--secondary-color);
+    background-color: var(--interactive-hover-bg);
+    color: var(--interactive-hover-text);
 }
 .hamburger, .mobilogo, .brand {
     display: none;
@@ -129,7 +131,7 @@
         cursor: pointer;
     }
     .mobi {
-        background-color: var(--primary-color);
+        background-color: var(--accent-bg);
         text-align: center;
         position: absolute;
         opacity: 0;
@@ -141,8 +143,8 @@
         transition: linear .3s;
     }
     .mobi ul li {
-        border-bottom: 1px solid var(--text-color);
-        background-color: var(--secondary-color);
+        border-bottom: 1px solid var(--border-strong);
+        background-color: var(--surface-bg);
     }
 }
 

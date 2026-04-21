@@ -1,0 +1,56 @@
+.header {
+    display: grid;
+    gap: 12px;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.eyebrow {
+    font-family: var(--title-font), sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.title {
+    font-family: var(--title-font), sans-serif;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1;
+    color: var(--text-primary);
+}
+
+.description {
+    max-width: 62ch;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.center .description {
+    margin: 0 auto;
+}
+
+.right .description {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 620px) {
+    .header {
+        gap: 10px;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+}
