@@ -7,6 +7,8 @@ import Director from './components/Director/Director';
 import Gallery from './components/Gallery/Gallery';
 import DirectorList from './components/DirectorList/DirectorList';
 import Contact from './components/Contact/Contact';
+import ActorList from './components/ActorList/ActorList';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -17,8 +19,10 @@ function App() {
       <Projects />
       <DirectorList />
       <Director />
+      <ActorList />
       <Gallery />
       <Contact />
+      <Footer />
     </div>
   );
 }

@@ -10,12 +10,15 @@ const Gallery = () => {
                 <SectionHeading
                     eyebrow="Selected Frames"
                     title="Gallery"
-                    description="A compact view of the visual worlds, production textures, and on-set energy behind UFO Entertainment projects."
+                    description="A drifting collage of portraits, set moments, crew fragments, and visual moods arranged with a more instinctive editorial rhythm."
                 />
 
                 <div className={styles.grid}>
                     {galleryItems.map((item) => (
-                        <article key={item.title} className={styles.card}>
+                        <article
+                            key={item.title}
+                            className={`${styles.card} ${styles[item.variant] || ""} ${styles[item.tone] || ""}`.trim()}
+                        >
                             <div className={styles.imageWrap}>
                                 <img src={item.image} alt={item.title} loading="lazy" />
                             </div>

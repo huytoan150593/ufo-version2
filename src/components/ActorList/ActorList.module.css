@@ -1,0 +1,224 @@
+.section {
+    padding: 0;
+    background:
+        radial-gradient(circle at 14% 32%, rgba(173, 148, 102, 0.16), transparent 18%),
+        radial-gradient(circle at 78% 18%, rgba(236, 225, 210, 0.32), transparent 14%),
+        linear-gradient(180deg, rgba(243, 235, 224, 0.96), rgba(236, 225, 210, 0.88));
+}
+
+.inner {
+    width: min(1440px, 100%);
+    margin: 0 auto;
+    display: grid;
+    gap: 28px;
+    padding: 52px 24px 70px;
+}
+
+.heading {
+    max-width: 420px;
+    display: grid;
+    gap: 10px;
+    color: var(--text-primary);
+}
+
+.eyebrow {
+    font-family: "Courier New", monospace;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-muted);
+}
+
+.title {
+    font-family: var(--title-font), sans-serif;
+    font-size: clamp(2.3rem, 4vw, 4.6rem);
+    line-height: 0.95;
+}
+
+.description {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 44px;
+    align-items: center;
+}
+
+.detailPane {
+    min-width: 0;
+    animation: detailIn 0.38s ease;
+}
+
+.selectorPane {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+.selectorRail {
+    display: grid;
+    gap: 26px;
+    width: 100%;
+}
+
+.selectorCard {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: rgba(0, 0, 0, 0.72);
+    text-align: right;
+    cursor: pointer;
+    transition: transform 0.2s linear, color 0.2s linear;
+}
+
+.selectorCard:hover,
+.active {
+    transform: translateX(-8px);
+    color: var(--text-primary);
+}
+
+.selectorText {
+    font-family: var(--title-font), sans-serif;
+    font-size: clamp(1.45rem, 2.2vw, 2.1rem);
+    line-height: 1;
+}
+
+.avatarWrap {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+}
+
+.avatarFrame {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #111111;
+    background-color: rgba(255, 255, 255, 0.38);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.14);
+}
+
+.avatarFrame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes detailIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .inner {
+        padding: 42px 18px 58px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .selectorPane {
+        justify-content: stretch;
+    }
+
+    .selectorRail {
+        display: flex;
+        gap: 14px;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scroll-snap-type: x proximity;
+    }
+
+    .selectorCard {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10px;
+        min-width: 110px;
+        text-align: center;
+        scroll-snap-align: start;
+    }
+
+    .selectorText {
+        font-size: 0.95rem;
+    }
+
+    .avatarWrap {
+        width: 78px;
+        height: 78px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .inner {
+        padding: 34px 14px 48px;
+    }
+
+    .selectorPane {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .selectorRail {
+        display: flex;
+        gap: 14px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 2px 2px 10px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .selectorRail::-webkit-scrollbar {
+        display: none;
+    }
+
+    .selectorCard {
+        min-width: 68px;
+        width: 68px;
+        gap: 0;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .selectorCard:hover,
+    .active {
+        transform: none;
+    }
+
+    .selectorText {
+        display: none;
+    }
+
+    .avatarWrap {
+        width: 68px;
+        height: 68px;
+    }
+
+    .avatarFrame {
+        border-width: 3px;
+    }
+}

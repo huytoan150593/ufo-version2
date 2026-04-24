@@ -4,7 +4,7 @@ import { useState } from "react";
 import { BsYoutube, BsFacebook, BsTwitter, BsFilm } from "react-icons/bs";
 
 const Navbar = () => {
-    const menuList = ["home", "projects", "gallery", "contact"];
+    const menuList = ["home", "projects", "actor", "gallery", "contact"];
     const [show, setShow] = useState(false);
     const handleClick = () => {
         setShow(!show);

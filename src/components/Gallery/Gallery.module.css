@@ -1,60 +1,197 @@
 .section {
-    padding: 90px 24px;
+    padding: 92px 24px;
+    background: linear-gradient(180deg, rgba(243, 235, 224, 0.74), rgba(236, 225, 210, 0.48));
 }
 
 .inner {
-    width: min(1180px, 100%);
+    width: min(1360px, 100%);
     margin: 0 auto;
     display: grid;
-    gap: 36px;
+    gap: 42px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    gap: 18px;
 }
 
 .card {
+    position: relative;
     overflow: hidden;
-    background-color: var(--surface-bg);
-    border: 1px solid var(--border-subtle);
+    background-color: #0d0d0d;
+    min-height: 220px;
+}
+
+.card:hover img {
+    transform: scale(1.03);
 }
 
 .imageWrap {
-    aspect-ratio: 4 / 3;
+    position: absolute;
+    inset: 0;
     overflow: hidden;
 }
 
+.imageWrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.48));
+}
+
 .imageWrap img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s ease;
 }
 
 .content {
+    position: absolute;
+    inset: auto 0 0 0;
+    z-index: 1;
     display: grid;
-    gap: 8px;
-    padding: 18px 18px 22px;
+    gap: 6px;
+    padding: 14px 14px 16px;
 }
 
 .type {
     font-family: var(--title-font), sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.16em;
-    font-size: 0.8rem;
-    color: var(--text-muted);
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.72);
 }
 
 .title {
     font-family: var(--title-font), sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.08rem;
     line-height: 1.2;
-    color: var(--text-primary);
+    color: #fff8ef;
+}
+
+.tall {
+    grid-column: span 3;
+    grid-row: span 5;
+    min-height: 760px;
+}
+
+.wide {
+    grid-column: span 3;
+    grid-row: span 2;
+    min-height: 360px;
+}
+
+.medium {
+    grid-column: span 3;
+    grid-row: span 2;
+    min-height: 260px;
+}
+
+.small {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 220px;
+}
+
+.wideShort {
+    grid-column: span 3;
+    grid-row: span 2;
+    min-height: 280px;
+}
+
+.smallTall {
+    grid-column: span 1;
+    grid-row: span 2;
+    min-height: 340px;
+}
+
+.heroWide {
+    grid-column: span 4;
+    grid-row: span 3;
+    min-height: 470px;
+}
+
+.mono img {
+    filter: grayscale(1);
+}
+
+.warm img {
+    filter: saturate(0.95) sepia(0.08);
+}
+
+.soft img {
+    filter: saturate(0.92) brightness(1.04);
+}
+
+.neon img {
+    filter: saturate(1.2) contrast(1.02);
+}
+
+.cool img {
+    filter: saturate(1.04) hue-rotate(-8deg);
+}
+
+.green img {
+    filter: saturate(0.92) hue-rotate(-12deg);
+}
+
+.clean img {
+    filter: brightness(1.06) saturate(0.86);
+}
+
+.neutral img {
+    filter: saturate(0.92);
+}
+
+@media screen and (max-width: 1199px) {
+    .grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .tall {
+        grid-column: span 2;
+        grid-row: span 3;
+        min-height: 620px;
+    }
+
+    .wide,
+    .medium,
+    .wideShort,
+    .heroWide {
+        grid-column: span 2;
+    }
+
+    .small {
+        grid-column: span 2;
+        min-height: 240px;
+    }
+
+    .smallTall {
+        grid-column: span 2;
+        min-height: 300px;
+    }
 }
 
 @media screen and (max-width: 834px) {
     .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .tall,
+    .wide,
+    .medium,
+    .small,
+    .wideShort,
+    .smallTall,
+    .heroWide {
+        grid-column: span 1;
+        grid-row: span 1;
+        min-height: 250px;
     }
 }
 
@@ -63,8 +200,30 @@
         padding: 72px 18px;
     }
 
+    .inner {
+        gap: 28px;
+    }
+
     .grid {
         grid-template-columns: 1fr;
-        gap: 18px;
+        gap: 12px;
+    }
+
+    .tall,
+    .wide,
+    .medium,
+    .small,
+    .wideShort,
+    .smallTall,
+    .heroWide {
+        min-height: 240px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 1rem;
     }
 }

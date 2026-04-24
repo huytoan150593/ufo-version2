@@ -3,6 +3,7 @@ import styles from "./Contact.module.css";
 import SectionHeading from "../shared/SectionHeading/SectionHeading";
 import InfoCard from "../shared/InfoCard/InfoCard";
 import { contactItems } from "../../data/siteContent";
+import InquiryForm from "../InquiryForm/InquiryForm";
 
 const Contact = () => {
     return (
@@ -14,6 +15,8 @@ const Contact = () => {
                     description="Share the brief, the rough goal, or even just the direction you are exploring. The team can shape the production path from there."
                     align="center"
                 />
+
+                <InquiryForm />
 
                 <div className={styles.grid}>
                     {contactItems.map((item) => {
