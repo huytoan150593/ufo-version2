@@ -17,7 +17,7 @@ const ActorDetailCard = ({ actor }) => {
                         <Icon size={28} />
                     </span>
                     <div>
-                        <h3 className={styles.name}>{actor.name}</h3>
+                        <h5 className={styles.name}>{actor.name}</h5>
                         <p className={styles.role}>{actor.role}</p>
                     </div>
                 </div>

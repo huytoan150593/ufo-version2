@@ -78,6 +78,43 @@ body {
   position: relative;
 }
 
+.section-fallback {
+  display: grid;
+  align-items: center;
+  min-height: 360px;
+  padding: var(--section-space-regular) var(--page-gutter);
+  border-top: 1px solid var(--section-divider);
+  background: linear-gradient(180deg, rgba(243, 235, 224, 0.68), rgba(236, 225, 210, 0.28));
+}
+
+.section-fallback.is-compact {
+  min-height: 220px;
+  padding: var(--section-space-compact) var(--page-gutter);
+}
+
+.section-fallback__inner {
+  width: min(var(--page-max-content), 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+.section-fallback__line {
+  display: block;
+  height: 16px;
+  width: 100%;
+  max-width: 720px;
+  background: linear-gradient(90deg, rgba(173, 148, 102, 0.35), rgba(173, 148, 102, 0.12));
+}
+
+.section-fallback__line--short {
+  max-width: 180px;
+}
+
+.section-fallback__line--medium {
+  max-width: 460px;
+}
+
 @media screen and (max-width: 1024px) {
   :root {
     --page-gutter: 18px;

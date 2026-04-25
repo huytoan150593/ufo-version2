@@ -1,22 +1,27 @@
 .card {
+    --card-border-width: 1.5px;
+    --media-pane-width: clamp(248px, 31vw, 332px);
     position: relative;
     display: grid;
-    grid-template-columns: minmax(240px, 360px) 1fr;
+    grid-template-columns: var(--media-pane-width) minmax(0, 1fr);
     gap: 28px;
     padding: 24px 28px;
     overflow: hidden;
     border-radius: 28px;
     background-color: #efe6d8;
     color: #111111;
-    border: 5px solid #111111;
+    border: var(--card-border-width) solid var(--color-ink);
     box-shadow: 0 22px 48px rgba(0, 0, 0, 0.14);
 }
 
 .visualLayer {
     position: absolute;
-    inset: 0 auto 0 23%;
-    width: 34%;
-    background-color: rgba(173, 148, 102, 0.7);
+    inset: calc(var(--card-border-width) * -1) auto calc(var(--card-border-width) * -1)
+        calc(var(--card-border-width) * -1);
+    width: calc(var(--media-pane-width) + 28px);
+    background-color: var(--color-brand);
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
 }
 
 .imageWrap {
@@ -24,6 +29,10 @@
     z-index: 1;
     aspect-ratio: 3 / 4;
     overflow: hidden;
+    align-self: center;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0px;
 }
 
 .imageWrap img {
@@ -99,19 +108,24 @@
 
 @media screen and (max-width: 1024px) {
     .card {
+        --media-pane-width: 1fr;
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 20px;
     }
 
     .visualLayer {
-        inset: 0 0 auto 0;
+        inset: calc(var(--card-border-width) * -1) calc(var(--card-border-width) * -1) auto
+            calc(var(--card-border-width) * -1);
         width: 100%;
         height: 40%;
+        border-top-right-radius: 28px;
+        border-bottom-left-radius: 0;
     }
 
     .imageWrap {
         max-width: 420px;
+        margin-inline: auto;
     }
 
     .content {
@@ -125,13 +139,14 @@
         gap: 18px;
         border-radius: 22px;
         padding: 18px;
-        border-width: 4px;
     }
 
     .visualLayer {
         inset: auto 0 0 0;
         width: 100%;
         height: 34%;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 22px;
     }
 
     .identity {
@@ -160,6 +175,8 @@
     .imageWrap {
         order: 2;
         max-width: none;
+        margin-inline: 0;
+        border-radius: 18px;
     }
 
     .divider {
