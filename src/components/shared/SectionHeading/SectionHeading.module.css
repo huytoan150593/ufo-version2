@@ -17,7 +17,7 @@
 
 .eyebrow {
     font-family: var(--title-font), sans-serif;
-    font-size: 0.95rem;
+    font-size: var(--heading-eyebrow-size);
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--text-muted);
@@ -25,14 +25,14 @@
 
 .title {
     font-family: var(--title-font), sans-serif;
-    font-size: clamp(2rem, 4vw, 3.4rem);
+    font-size: var(--heading-display-size);
     line-height: 1;
     color: var(--text-primary);
 }
 
 .description {
     max-width: 62ch;
-    font-size: 1rem;
+    font-size: var(--heading-support-size);
     line-height: 1.7;
     color: var(--text-muted);
 }

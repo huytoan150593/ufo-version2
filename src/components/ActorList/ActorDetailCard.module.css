@@ -1,9 +1,9 @@
 .card {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(280px, 420px) 1fr;
-    gap: 36px;
-    padding: 30px 34px;
+    grid-template-columns: minmax(240px, 360px) 1fr;
+    gap: 28px;
+    padding: 24px 28px;
     overflow: hidden;
     border-radius: 28px;
     background-color: #efe6d8;
@@ -58,7 +58,7 @@
 
 .name {
     font-family: var(--title-font), sans-serif;
-    font-size: clamp(2rem, 4vw, 3.1rem);
+    font-size: clamp(1.8rem, 3vw, 2.55rem);
     line-height: 1;
 }
 
@@ -78,7 +78,7 @@
 .description {
     max-width: 28ch;
     font-family: "Courier New", monospace;
-    font-size: 1rem;
+    font-size: 0.94rem;
     line-height: 1.55;
     font-weight: 700;
 }
@@ -100,8 +100,8 @@
 @media screen and (max-width: 1024px) {
     .card {
         grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 24px;
+        gap: 20px;
+        padding: 20px;
     }
 
     .visualLayer {

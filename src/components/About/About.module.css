@@ -2,24 +2,27 @@
     position: relative;
     display: flex;
     justify-content: space-around;
-    padding: 50px;
-    font-size: 18px;
+    width: min(var(--page-max-content), 100%);
+    margin: 0 auto;
+    padding: var(--section-space-regular) var(--page-gutter);
+    font-size: 1rem;
 }
 .content {
     flex-basis: 85%;
-    padding-top: 50px;
+    padding-top: 24px;
 }
 .content p {
     text-align: right;
     color: var(--text-primary);
+    line-height: 1.75;
 }
 .arrow {
     position: relative;
     width: 1px;
     max-height: 500px;
     background-color: var(--border-strong);
-    margin-top: 50px;
-    margin-bottom: 200px;
+    margin-top: 20px;
+    margin-bottom: 120px;
     opacity: 0;
     transform: translateY(-120%);
     animation: runArrow 1s forwards;
@@ -35,7 +38,7 @@
     content: "about us";
     width: 100px;
     font-family: var(--title-font), sans-serif;
-    font-size: 20px;
+    font-size: 1.05rem;
     font-weight: 800;
     bottom: -90px;
     right: -50px;
@@ -44,7 +47,6 @@
     animation: showTitle .5s 1s forwards;
 }
 @media screen and (max-width: 1024px) {
-    
     p {
         font-size: 14px;
     }
@@ -56,7 +58,7 @@
 }
 @media screen and (max-width: 620px) {
     .container {
-        padding-right: 20px;
+        padding-right: var(--page-gutter);
     }
     .content p{
         text-align: justify;

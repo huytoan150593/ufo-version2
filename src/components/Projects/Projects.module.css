@@ -1,14 +1,15 @@
 .container {
     position: relative;
-    margin: 50px auto;
-    padding-bottom: 100px;
+    width: min(var(--page-max-content), 100%);
+    margin: 0 auto;
+    padding: var(--section-space-regular) var(--page-gutter);
 }
 .arrow {
     position: relative;
     width: 70%;
     height: 1px;
     background-color: var(--border-strong);
-    margin-bottom: 50px;
+    margin-bottom: 36px;
     margin-left: 25%;
     transform: translateX(200%);
     animation: moveInHorizon 1s forwards;
@@ -22,7 +23,7 @@
 .arrow::before {
     position: absolute;
     content: "our projects";
-    font-size: 20px;
+    font-size: 1.05rem;
     font-family: var(--title-font), sans-serif;
     font-weight: 800;
     left: -150px;
@@ -32,7 +33,7 @@
     animation: fog .5s 1s forwards, moveInHorizon .5s 1s forwards;
 }
 .wrapper {
-    padding-top: 50px;
+    padding-top: 28px;
 }
 .project {
     position: relative;
@@ -40,7 +41,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 30px auto;
+    margin: 24px auto;
 }
 .project:nth-child(2) {
     flex-direction: row-reverse;
@@ -131,26 +132,21 @@
     transform: translateX(120%);
 }
 .content p {
-    font-size: 18px;
+    font-size: 1rem;
     margin: 20px 0;
     color: var(--text-primary);
+    line-height: 1.7;
 }
 .content button {
     border: none;
     background-color: var(--interactive-bg);
     color: var(--interactive-text);
-    font-size: 20px;
+    font-size: 1rem;
     text-decoration: underline;
     cursor: pointer;
 }
 
 @media screen and (max-width: 1201px) {
-    .content p {
-        font-size: 14px;
-    }
-    .content button {
-        font-size: 16px;
-    }
 }
 @media screen and (max-width: 1024px) {
     

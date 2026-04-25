@@ -1,12 +1,13 @@
 .section {
-    padding: 96px 24px;
+    padding: var(--section-space-regular) var(--page-gutter);
+    border-top: 1px solid var(--section-divider);
     background:
         linear-gradient(180deg, rgba(173, 148, 102, 0.16), rgba(236, 225, 210, 0.68)),
         var(--page-bg);
 }
 
 .inner {
-    width: min(1180px, 100%);
+    width: min(var(--page-max-content), 100%);
     margin: 0 auto;
     display: grid;
     gap: 34px;
@@ -47,6 +48,6 @@
 
 @media screen and (max-width: 620px) {
     .section {
-        padding: 74px 18px;
+        padding: var(--section-space-regular) var(--page-gutter);
     }
 }

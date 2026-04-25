@@ -38,6 +38,20 @@ font-family: 'Poppins', sans-serif;
   --content-font: 'Alata', sans-serif;
   --title-font-size: 25px;
   --content-font-size: 20px;
+
+  /* Page rhythm */
+  --page-max-compact: 1120px;
+  --page-max-content: 1200px;
+  --page-max-feature: 1280px;
+  --page-gutter: 24px;
+  --section-space-compact: 64px;
+  --section-space-regular: 84px;
+  --section-space-feature: 104px;
+  --section-divider: rgba(0, 0, 0, 0.08);
+  --heading-eyebrow-size: 0.88rem;
+  --heading-display-size: clamp(1.9rem, 3vw, 3rem);
+  --heading-support-size: 0.98rem;
+  --heading-tight-size: clamp(1.8rem, 2.7vw, 2.6rem);
 }
 
 * {
@@ -53,6 +67,37 @@ body {
   color: var(--text-primary);
   overflow-x: hidden;
   background-color: var(--page-bg);
+}
+
+.App {
+  display: grid;
+}
+
+.App > section,
+.App > footer {
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --page-gutter: 18px;
+    --section-space-compact: 52px;
+    --section-space-regular: 68px;
+    --section-space-feature: 82px;
+    --heading-display-size: clamp(1.75rem, 4vw, 2.5rem);
+    --heading-tight-size: clamp(1.65rem, 3.5vw, 2.2rem);
+  }
+}
+
+@media screen and (max-width: 620px) {
+  :root {
+    --page-gutter: 14px;
+    --section-space-compact: 40px;
+    --section-space-regular: 54px;
+    --section-space-feature: 62px;
+    --heading-eyebrow-size: 0.8rem;
+    --heading-support-size: 0.92rem;
+  }
 }
 a,
 a:hover,
@@ -79,4 +124,3 @@ img {
 }
 @media screen and (max-width: 6200px) {
 }
-
